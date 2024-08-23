@@ -1,0 +1,15 @@
+file_format: "1"
+id: 67 
+name: 6x7
+type: shield
+url: https://github.com/JuLion21/6x7kb/
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - 67_left
+  - 67_right
+
+
