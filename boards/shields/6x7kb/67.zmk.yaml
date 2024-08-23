@@ -1,6 +1,6 @@
 file_format: "1"
 id: 67 
-name: 6x7
+name: 67
 type: shield
 url: https://github.com/JuLion21/6x7kb/
 requires: [pro_micro]
