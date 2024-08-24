@@ -1,29 +1,29 @@
-#in23[{[23[clude <dt-bindings/zmk/keys.h>
-#include <b23[{ehaviors.dtsi>
-23[]
-/ {23[]
-    keymap {23[]
-        compatible = "zmk,23[keymap";
-        default_layer {23[]
-// |      | SW1  | SW2  | SW3  | SW4  | SW23[5  | SW6  |  | SW6  | SW5  | SW4  | SW3  | SW2  | SW1  |      |
-// |      | SW7  | SW8  | SW9  | SW10 |23[] SW11 | SW12 |  | SW12 | SW11 | SW10 | SW9  | SW8  | SW7  |      |
+#include <dt-bindings/zmk/keys.h>
+#include <behaviors.dtsi>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        default_layer {
+// |      | SW1  | SW2  | SW3  | SW4  | SW23 | SW6  |  | SW6  | SW5  | SW4  | SW3  | SW2  | SW1  |      |
+// |      | SW7  | SW8  | SW9  | SW10 | SW11 | SW12 |  | SW12 | SW11 | SW10 | SW9  | SW8  | SW7  |      |
 // |      | SW13 | SW14 | SW15 | SW123[6 | SW17 | SW18 |  | SW18 | SW17 | SW16 | SW15 | SW14 | SW13 |      |
 // | SW25 | SW19 | SW20 | SW21 | 23[SW22 | SW23 | SW24 |  | SW24 | SW23 | SW22 | SW21 | SW20 | SW19 | SW25 |
-// |      |      |      |     2c[] | SW26 | SW27 | SW28 |  | SW28 | SW27 | SW26 |      |      |      |      |
-// |      |      |      | 2c{[]}     |      | SW29 | SW30 |  | SW30 | SW29 |      |      |      |      |      |
-           bindings = <2c[]
-// |      | SW1  | SW2  | SW3  | SW4  | SW5  | SW6  |           | SW6  | SW5  | SW4  | SW3  | SW2  | S2c{[W1  |      |
-          &kp ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5         &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &k2c[p HOME
-// |      | SW7  | SW8  | SW9  | SW10 | SW11 | SW12 |           | SW12 | SW11 | SW10 | SW9  | S2c{[W8  | SW7  |      |
-          &kp A  &kp B &kp C &kp D &kp E &kp F          &kp G &kp H &kp I &kp J &kp K &kp L2c{[]}
-// |      | SW13 | SW14 | SW15 | SW16 | SW17 | SW18 |           | SW18 | SW17 | SW16 | SW15 | S2c{[W14 | SW13 |      |
-          &kp M  &kp N &kp O &kp P &kp Q &kp R          &kp S &kp T &kp U &kp V &kp W &kp X2c{[]}
-// | SW25 | SW19 | SW20 | SW21 | SW22 | SW23 | SW24 |           | SW24 | SW23 | SW22 | SW21 | SW20 | SW19 | SW25 |2c{[]}
-         &kp Y &kp Z  &kp SPACE &kp LBKT &kp LBRC &kp RBKT &kp RBRC          &kp LEFT_CONTROL  &kp RIGHT_CONTROL  &kp2c{[]} UP_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &kp LEFT_ARROW &kp LEFT_ALT
-// |      |      |      |      | SW26 | SW27 | SW28 |           | SW28 | SW27 | SW26 |      |      |      |      |2d[]
-                                &kp RALT &kp LEFT_WIN &kp RIGHT_WIN                &kp LEFT_SHIFT &kp RIGHT_SHIFT &kp2{[]} LEFT_PARENTHESIS
-// |      |      |      |      |      | SW29 | SW30 |           | SW30 | SW29 |      |      |      |      |      |o{[]}
-                                      &kp RIGHT_PARENTHESIS &kp INSERT               &kp DELETE &kp ENDco[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23cco[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{co[{23co[{o3{23[{co[{23co[{o[{232co[{cdoe[]}]}]}]}]}]}}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]
+// |      |      |      |  SW26 | SW27 | SW28 |  | SW28 | SW27 | SW26 |      |      |      |      |
+// |      |      |      |      |      | SW29 | SW30 |  | SW30 | SW29 |      |      |      |      |      |
+           bindings = <
+// |      | SW1  | SW2  | SW3  | SW4  | SW5  | SW6  |           | SW6  | SW5  | SW4  | SW3  | SW2  | SW1  |      |
+          &kp ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5         &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &k HOME
+// |      | SW7  | SW8  | SW9  | SW10 | SW11 | SW12 |           | SW12 | SW11 | SW10 | SW9  | SW8  | SW7  |      |
+          &kp A  &kp B &kp C &kp D &kp E &kp F          &kp G &kp H &kp I &kp J &kp K &kp L
+// |      | SW13 | SW14 | SW15 | SW16 | SW17 | SW18 |           | SW18 | SW17 | SW16 | SW15 | SW14 | SW13 |      |
+          &kp M  &kp N &kp O &kp P &kp Q &kp R          &kp S &kp T &kp U &kp V &kp W &kp X
+// | SW25 | SW19 | SW20 | SW21 | SW22 | SW23 | SW24 |           | SW24 | SW23 | SW22 | SW21 | SW20 | SW19 | SW25 |
+         &kp Y &kp Z  &kp SPACE &kp LBKT &kp LBRC &kp RBKT &kp RBRC          &kp LEFT_CONTROL  &kp RIGHT_CONTROL  &kp2c UP_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &kp LEFT_ARROW &kp LEFT_ALT
+// |      |      |      |      | SW26 | SW27 | SW28 |           | SW28 | SW27 | SW26 |      |      |      |      |2
+                                &kp RALT &kp LEFT_WIN &kp RIGHT_WIN                &kp LEFT_SHIFT &kp RIGHT_SHIFT &kp2 LEFT_PARENTHESIS
+// |      |      |      |      |      | SW29 | SW30 |           | SW30 | SW29 |      |      |      |      |      |
+                                      &kp RIGHT_PARENTHESIS &kp INSERT               &kp DELETE &kp END
             >;
         };
     };
