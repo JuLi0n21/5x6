@@ -34,6 +34,7 @@
             >;
         };
 
+/*
         special_layer {
             bindings = <
 //        |      |      |      |      |      |      |           |      |      |      |      |      |      |      
@@ -50,5 +51,6 @@
                                       &trans  &trans              &trans  &trans         
         >;
         };
+*/
     };
 };
