@@ -36,11 +36,11 @@
         wakeup-source;
 
         row-gpios
-            = <&nice_nano_v2 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 0 from the schematic file
-            , <&nice_nano_v2 8  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 1 from the schematic file
-            , <&nice_nano_v2 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 2 from the schematic file
-            , <&nice_nano_v2 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 3 from the schematic file
-            , <&nice_nano_v2 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 4 from the schematic file
+            = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 0 from the schematic file
+            , <&pro_micro 8  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 1 from the schematic file
+            , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 2 from the schematic file
+            , <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 3 from the schematic file
+            , <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 4 from the schematic file
             ;
 
     };
