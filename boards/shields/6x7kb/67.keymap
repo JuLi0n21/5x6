@@ -36,14 +36,14 @@
 
         special_layer {
             bindings = <
-//        |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
-          &none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none  &none  
-//        |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
+//        |      |      |      |      |      |      |           |      |      |      |      |      |      |      
+          &none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+//        |      |      |      |      |      |      |           |      |      |      |      |      |      |      
           &none  &none  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &none   &kp RIGHT_BRACE &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &none  &none  &none  
-//        |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
-           &none  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none      &none  &none  &none  &none  &none  &none  &none     
-// |      |      |      |      |      |      |      |           |      |      |      |      |      |      |      |     |
-    &none  &none  &none  &none  &none  &none  &none             &none  &none  &none  &none  &none  &none  &none  &none  
+//        |      |      |      |      |      |      |           |      |      |      |      |      |      |      
+           &none  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none      &none  &none  &none  &none  &none  &none    
+// |      |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
+    &none  &none  &none  &none  &none  &none  &none             &none  &none  &none  &none  &none  &none  &none  
 //                             |      |      |      |           |      |      |      |
                                &trans  &trans  &trans             &trans  &trans  &trans  
 //                                    |      |      |           |      |      |
