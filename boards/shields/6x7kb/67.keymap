@@ -9,15 +9,6 @@
 
 / {
 
-    combos {
-        compatible = "zmk,combos";
-        combo_Screenshot {
-            timeout-ms = <20>;
-            key-positions = <22 27>;
-            bindings = <&Screenshot>;
-        };
-     };
-
     keymap {
         compatible = "zmk,keymap";
         default_layer {
