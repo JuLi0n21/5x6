@@ -1,29 +1,89 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+&mt {
+      flavor = "tap-preferred";
+   // tapping_term_ms = <200>;
+};
+
 / {
+
+    combos {
+        compatible = "zmk,combos";
+        combo_eScape {
+            timeout-ms = <20>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        combo_Screenshot {
+            timeout-ms = <20>;
+            key-positions = <22 27>;
+            bindings = <&Screenshot>;
+        };
+     };
+
+    macros {
+    ZMK_MACRO(Screenshot,
+        wait-ms = <0>;
+        tap-ms = <0>;
+        bindings 
+        = <&macro_press &kp LEFT_WIN>
+        , <&macro_press &kp LSHFT>
+        , <&macro_tap &kp S>
+        , <&macro_release &kp LEFT_WIN>
+        , <&macro_release &kp LSHFT>
+        ;
+    )
+    ZMK_MACRO(Lock,
+        wait-ms = <0>;
+        tap-ms = <0>;
+        bindings 
+        = <&macro_press &kp LEFT_WIN>
+        , <&macro_tap &kp L>
+        , <&macro_release &kp LEFT_WIN>
+        ;
+    )
+    };
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
 // |      | SW1  | SW2  | SW3  | SW4  | SW23 | SW6  |  | SW6  | SW5  | SW4  | SW3  | SW2  | SW1  |      |
 // |      | SW7  | SW8  | SW9  | SW10 | SW11 | SW12 |  | SW12 | SW11 | SW10 | SW9  | SW8  | SW7  |      |
-// |      | SW13 | SW14 | SW15 | SW123[6 | SW17 | SW18 |  | SW18 | SW17 | SW16 | SW15 | SW14 | SW13 |      |
-// | SW25 | SW19 | SW20 | SW21 | 23[SW22 | SW23 | SW24 |  | SW24 | SW23 | SW22 | SW21 | SW20 | SW19 | SW25 |
-// |      |      |      |  SW26 | SW27 | SW28 |  | SW28 | SW27 | SW26 |      |      |      |      |
+// |      | SW13 | SW14 | SW15 | SW12 | SW17 | SW18 |  | SW18 | SW17 | SW16 | SW15 | SW14 | SW13 |      |
+// | SW25 | SW19 | SW20 | SW21 | SW22 | SW23 | SW24 |  | SW24 | SW23 | SW22 | SW21 | SW20 | SW19 | SW25 |
+// |      |      |      |      | SW28 | SW27 | SW#@ |  | SW26 | SW26 | SW26 |      |      |
 // |      |      |      |      |      | SW29 | SW30 |  | SW30 | SW29 |      |      |      |      |      |
            bindings = <
-// |      | SW1  | SW2  | SW3  | SW4  | SW5  | SW6  |           | SW6  | SW5  | SW4  | SW3  | SW2  | SW1  |      |
-          &kp ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5         &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp HOME
-// |      | SW7  | SW8  | SW9  | SW10 | SW11 | SW12 |           | SW12 | SW11 | SW10 | SW9  | SW8  | SW7  |      |
-          &kp A  &kp B &kp C &kp D &kp E &kp F          &kp G &kp H &kp I &kp J &kp K &kp L
-// |      | SW13 | SW14 | SW15 | SW16 | SW17 | SW18 |           | SW18 | SW17 | SW16 | SW15 | SW14 | SW13 |      |
-          &kp M  &kp N &kp O &kp P &kp Q &kp R          &kp S &kp T &kp U &kp V &kp W &kp X
-// | SW25 | SW19 | SW20 | SW21 | SW22 | SW23 | SW24 |           | SW24 | SW23 | SW22 | SW21 | SW20 | SW19 | SW25 |
-         &kp Y &kp Z  &kp SPACE &kp LBKT &kp LBRC &kp RBKT &kp RBRC          &kp LEFT_CONTROL  &kp RIGHT_CONTROL  &kp UP_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &kp LEFT_ARROW &kp LEFT_ALT
-// |      |      |      |      | SW26 | SW27 | SW28 |           | SW28 | SW27 | SW26 |      |      |      |      |
-                                &kp RALT &kp LEFT_WIN &kp RIGHT_WIN                &kp LEFT_SHIFT &kp RIGHT_SHIFT &kp LEFT_PARENTHESIS
-// |      |      |      |      |      | SW29 | SW30 |           | SW30 | SW29 |      |      |      |      |      |
-                                      &kp RIGHT_PARENTHESIS &kp INSERT               &kp DELETE &kp END
+//        |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
+          &kp ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
+//        |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
+          &kp HOME  &kp Q  &kp W &kp P &kp F &kp G              &kp J  &kp L &kp U &kp Y &kp  &kp END
+//        |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
+          &kp MINUS &kp A &kp R &kp S &kp T &kp D               &kp H &kp N &kp E &kp I &kp O  &kp SEMICOLON
+// |      |      |      |      |      |      |      |           |      |      |      |      |      |      |      |     |
+    &kp TAB &kp EQUAL &kp Z &kp X &kp C &kp V &kp B             &kp K &kp M  &mt SINGLE_QUOTE COMMA  &mt GRAVE DOT &mt BACKSLASH SLASH &none &none  
+//                             |      |      |      |           |      |      |      |
+            &kp LEFT_SHIFT &kp SPACE &kp LEFT_CONTROL           &kp BACKSPACE &kp RIGHT_CONTROL &kp RIGHT_SHIFT
+//                                    |      |      |           |      |      |
+                            &kp LEFT_WIN &kp LEFT_ALT           &mo 1  &kp ENTER 
+            >;
+        };
+
+        special_layer {
+            bindings = <
+//        |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
+          &none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none  &none  
+//        |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
+          &none  &none  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &none   &kp RIGHT_BRACE &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &none  &none  &none  
+//        |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
+           &none  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none      &none  &none  &none  &none  &none  &none  &none     
+// |      |      |      |      |      |      |      |           |      |      |      |      |      |      |      |     |
+    &none  &none  &none  &none  &none  &none  &none             &none  &none  &none  &none  &none  &none  &none  &none  
+//                             |      |      |      |           |      |      |      |
+                               &trans  &trans  &trans             &trans  &trans  &trans  
+//                                    |      |      |           |      |      |
+                                      &trans  &trans              &trans  &trans         
             >;
         };
     };
