@@ -17,3 +17,5 @@ include:
     shield: 67_left
   - board: nice_nano_v2
     shield: 67_right
+  - board: nice_nano_v2
+    shield: settings_reset
