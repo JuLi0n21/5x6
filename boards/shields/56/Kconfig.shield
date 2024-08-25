@@ -1,10 +1,10 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 config SHIELD_MY_BOARD
-    def_bool $(shields_list_contains,67)
+    def_bool $(shields_list_contains,56)
 
 config SHIELD_MY_BOARD_LEFT
-    def_bool $(shields_list_contains,67_left)
+    def_bool $(shields_list_contains,56_left)
 
 config SHIELD_MY_BOARD_RIGHT
-    def_bool $(shields_list_contains,67_right)
+    def_bool $(shields_list_contains,56_right)
