@@ -1,6 +1,6 @@
 file_format: "1"
-id: 67 
-name: 67
+id: 56
+name: 56
 type: shield
 url: https://github.com/JuLion21/6x7kb/
 requires: [pro_micro]
@@ -9,7 +9,7 @@ features:
   - keys
   - display
 siblings:
-  - 67_left
-  - 67_right
+  - 56_left
+  - 56_right
 
 
