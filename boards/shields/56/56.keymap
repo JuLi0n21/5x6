@@ -20,7 +20,7 @@
 // |      |      |      |      |      | SW29 | SW30 |  | SW30 | SW29 |      |      |      |      |      |
            bindings = <
 //        |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
-          &kp ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
+          &kp ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BACKSPACE
 //        |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
           &kp HOME  &kp Q  &kp W &kp F &kp P &kp G              &kp J  &kp L &kp U &kp Y &kp SLASH &kp END
 //        |      |      |      |      |      |      |           |      |      |      |      |      |      |      |
@@ -30,7 +30,7 @@
 //                             |      |      |      |           |      |      |      |
             &kp LEFT_SHIFT &kp SPACE &kp LEFT_CONTROL           &kp BACKSPACE &kp RIGHT_CONTROL &kp RIGHT_SHIFT
 //                                    |      |      |           |      |      |
-                            &kp LEFT_WIN &kp LEFT_ALT           &mo 0  &kp ENTER 
+                            &kp LEFT_WIN &kp LEFT_ALT           &mo 1  &kp ENTER 
             >;
         };
 
